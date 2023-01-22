@@ -13,6 +13,7 @@ entrypoints==0.4
 fonttools==4.38.0
 gitdb==4.0.10
 GitPython==3.1.30
+graphviz==0.20.1
 idna==3.4
 imageio==2.23.0
 importlib-metadata==6.0.0
@@ -21,6 +22,7 @@ jsonschema==4.17.3
 kiwisolver==1.4.4
 MarkupSafe==2.1.1
 matplotlib==3.6.2
+mpmath==1.2.1
 networkx==3.0
 numpy==1.24.1
 opencv-python==4.7.0.68
@@ -46,6 +48,7 @@ semver==2.13.0
 six==1.16.0
 smmap==5.0.0
 streamlit==1.16.0
+sympy==1.11.1
 tifffile==2022.10.10
 toml==0.10.2
 toolz==0.12.0

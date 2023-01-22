@@ -4,9 +4,10 @@ import cv2 as cv
 from vc import create_parts
 import shamir
 import random as rn
+import dh
 
 st.set_page_config(layout="wide")
-tab1, tab2, tab3, tab4 = st.tabs(['VC', 'Shamir', 'wip', 'wip'])
+tab1, tab2, tab3, tab4 = st.tabs(['VC', 'Shamir', 'Diffie-Hellman', 'wip'])
 
 with tab1:
     st.header("Visual Cryptography")
@@ -73,3 +74,19 @@ with tab2:
             st.write(line)
         "## Odszyfrowane"
         st.write(res22)
+
+    with tab3: 
+        st.header("Diffie Hellman")
+        N = st.number_input("N - liczba pierwsza", value=5387)
+        g = st.number_input("g - pierwiastek pierwotny", value=2144)
+
+        steps, graph = dh.diffie_hellman(N, g)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            for line in steps:
+                st.write(line)
+
+        with col2:
+            st.graphviz_chart(graph)
